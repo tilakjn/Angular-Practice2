@@ -1,0 +1,10 @@
+.main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.change{
+    color: cornflowerblue;
+}
+.bg{
+    background-color: darkblue;
+}

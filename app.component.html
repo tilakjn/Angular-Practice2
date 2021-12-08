@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="./app.component.css"/>
+<app-nav-bar></app-nav-bar>
+<div class="main">
+<app-login></app-login>
+<app-login></app-login>
+<app-login></app-login>
+</div>
+<h1>{{getName("bruce")}}</h1>
+<button (click)="getN('wayne')">click me</button>
+<input (keyup)="onKeyUp($event)"/>
+<input (keydown)="onKeyDown($event)"/>
+
+<input type="text" value ={{namee}} disabled={{disabledBox}}>
+<input type="text" [value]="namee" [disabled]="disabledBox">
+<button (click)="enableInput('game')">enable me</button>
+<app-temp></app-temp>
+
+<h1 style="color:red">Good</h1>
+<h1 [ngStyle]="{'color':'blue'}">Morning</h1>
+<h1 [ngStyle]="{'color':textColor}">Hii</h1>
+<h1 [ngStyle]="{'background-color':bgColor==='black'?'black':'gray'}">hello</h1>
+
+<h3  [ngClass]="'change'">afternoon</h3>
+<h3 [ngClass]="'change bg'">Hii</h3>
+<h3 [ngClass]="styleColor">hello</h3>
+
+<h1 appHighlight>afternoon</h1>
+
+<h1 appHighlight>{{'TILAK'| lowercase}}</h1>
+<h1>{{'tilak'| uppercase}}</h1>
+<h1>{{'100'| currency}}</h1>
+<h1 appHighlight>{{dateExample |date}}</h1>
+<h1>{{'0.050'| percent}}</h1>
+
+<h1>{{'159'|currency:'INR'}}</h1>
+<h1 appHighlight>{{dateExample |date:'dd/mm/yyyy'}}</h1>
+<h1>{{'0.444'|percent:'3.2-3'}}</h1>
+
+<h1 appHighlight>{{dateExample|date|uppercase}}</h1>
+<h1>{{'555'|currency:'YEN'|lowercase}}</h1>
+
+
+<app-footer></app-footer>
